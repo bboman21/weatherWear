@@ -1,0 +1,268 @@
+/* WeatherWear Design System - Modern Dashboard UI */
+
+:root {
+  /* 배경색 - 밝은 회색 */
+  --bg-primary: #f0f2f5;
+  --bg-secondary: #F5F8FB;
+
+  /* 날씨별 배경색 (소프트한 그라데이션) */
+  --bg-sunny: #f5f7fa;
+  --bg-partly-cloudy: #f2f4f7;
+  --bg-cloudy: #eceef2;
+  --bg-rainy: #e8ebf0;
+  --bg-snowy: #f0f2f8;
+
+  /* 카드 스타일 - 순수 흰색 */
+  --card-bg: #ffffff;
+  --card-hover-bg: #fafbfc;
+
+  /* 강조색 */
+  --accent-coral: #ff6b6b;
+  --accent-mint: #4ecdc4;
+  --accent-blue: #3b82f6;
+  --accent-yellow: #fbbf24;
+  --accent-purple: #8b5cf6;
+  --accent-orange: #f97316;
+
+  /* 텍스트 */
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --text-light: #94a3b8;
+
+  /* 라운딩 */
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+
+  /* 폰트 */
+  --font-main: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* 그림자 */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.1);
+
+  /* 보더 */
+  --border-light: rgba(255, 255, 255, 0.8);
+  --border-subtle: rgba(0, 0, 0, 0.04);
+}
+
+/* 날씨별 배경색 클래스 */
+body.weather-sunny {
+  --bg-primary: var(--bg-sunny);
+}
+
+body.weather-partly-cloudy {
+  --bg-primary: var(--bg-partly-cloudy);
+}
+
+body.weather-cloudy {
+  --bg-primary: var(--bg-cloudy);
+}
+
+body.weather-rainy {
+  --bg-primary: var(--bg-rainy);
+}
+
+body.weather-snowy {
+  --bg-primary: var(--bg-snowy);
+}
+
+/* 모던 카드 스타일 */
+.neu-card {
+  background: var(--card-bg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-subtle);
+  transition: all 0.3s ease;
+}
+
+.neu-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+.neu-card-sm {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.neu-card-sm:hover {
+  background: #e2e5e9;
+}
+
+.neu-card-inset {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+/* 글래스모피즘 카드 */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: var(--shadow-md);
+}
+
+/* 모던 버튼 */
+.neu-button {
+  background: #ffffff;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.neu-button:hover {
+  background: #f5f5f5;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.neu-button:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+.neu-button.active {
+  background: var(--accent-blue);
+  color: white;
+}
+
+/* 모던 입력 */
+.neu-input {
+  background: var(--bg-secondary);
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  font-size: 14px;
+  color: var(--text-primary);
+  outline: none;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.neu-input:focus {
+  background: white;
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* 모던 셀렉트 */
+.neu-select {
+  background: #ffffff;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  font-size: 14px;
+  color: var(--text-primary);
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2364748b' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 44px;
+  transition: all 0.2s ease;
+}
+
+.neu-select:hover {
+  background-color: #f5f5f5;
+}
+
+.neu-select:focus {
+  background-color: white;
+  border-color: var(--accent-blue);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* 태그 스타일 */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 16px;
+  border-radius: 24px;
+  font-size: 13px;
+  font-weight: 500;
+  margin: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.tag-default {
+  background: #ffffff;
+  color: var(--text-secondary);
+}
+
+.tag-default:hover {
+  background: #f5f5f5;
+  color: var(--text-primary);
+}
+
+.tag-active {
+  background: var(--accent-blue);
+  color: white;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* 아이콘 스타일 */
+.icon {
+  font-size: 1.2em;
+  margin-right: 6px;
+}
+
+/* 데이터 시각화 요소 */
+.data-card {
+  background: var(--card-bg);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-subtle);
+}
+
+.data-value {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.1;
+}
+
+.data-unit {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-left: 4px;
+}
+
+.data-label {
+  font-size: 13px;
+  color: var(--text-light);
+  margin-bottom: 8px;
+}
+
+/* 프로그레스 바 */
+.progress-bar {
+  height: 6px;
+  background: var(--bg-secondary);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
